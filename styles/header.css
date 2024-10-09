@@ -1,0 +1,38 @@
+header {
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000e7;
+  max-height: 100px;
+}
+
+nav>ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+
+  padding: 10px 30px;
+  border: 1px solid #ffffffc9;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+
+.login {
+  background-color: #322fc994;
+}
+
+.login:hover {
+  background-color: #322fc9b7;
+}
+
+.cadastro:hover {
+  color: #c7c3c3;
+}

@@ -1,0 +1,62 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  padding-inline: 80px;
+  background-color: #000000e7;
+  height: 240px;
+}
+
+footer h4 {
+  color: white;
+  font-size: 24px;
+  margin-block: 32px;
+}
+
+footer span {
+  color: white;
+  font-size: 18px;
+}
+
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  & .whatssap,
+  .telefone {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+
+  & .facebook a,
+  .instagram a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+  }
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-inline: 1px solid rgba(0, 0, 0, 0.747);
+
+  & span {
+    margin-bottom: 10px;
+  }
+}
