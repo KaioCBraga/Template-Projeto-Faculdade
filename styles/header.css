@@ -9,30 +9,84 @@ header {
   max-height: 100px;
 }
 
-nav>ul {
+.right-menu {
   display: flex;
-  gap: 40px;
+  gap: 20px;
+  align-items: center;
 }
 
-nav ul a {
-  text-decoration: none;
-  color: white;
-
-  padding: 10px 30px;
-  border: 1px solid #ffffffc9;
-  border-radius: 8px;
+.usuario {
+  display: flex;
+  gap: 10px;
+  align-items: center;
   text-transform: uppercase;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.493);
+  background-color: rgba(0, 0, 255, 0.116);
+  padding: 8px 10px;
+  border-radius: 8px;
 }
 
-
-.login {
-  background-color: #322fc994;
+.usuario:hover {
+  background-color: rgba(0, 0, 255, 0.37);
 }
 
-.login:hover {
-  background-color: #322fc9b7;
+.configuracoes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.493);
+  background-color: #292929;
+  padding: 8px 10px;
+  border-radius: 8px;
 }
 
-.cadastro:hover {
-  color: #c7c3c3;
+.configuracoes:hover {
+  background-color: #29292969;
+}
+
+@media (max-width: 800px) {
+  .configuracoes {
+    span {
+      display: none;
+    }
+  }
+
+  header .logo img {
+    height: 80px;
+    width: 80px;
+  }
+
+  header .right-menu .configuracoes,
+  header .right-menu .usuario {
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 570px) {
+
+
+  header {
+    align-items: center;
+
+    & .logo {
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  .usuario {
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (max-width:400px) {
+  .right-menu img {
+    height: 20px;
+    border: none;
+  }
 }
