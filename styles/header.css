@@ -1,4 +1,4 @@
-header {
+.header-container {
   margin-inline: auto;
   width: 100%;
   padding-inline: 80px;
@@ -6,7 +6,13 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: #000000e7;
-  max-height: 100px;
+  height: 100px;
+  font-family: "Inter", sans-serif;
+
+}
+
+.menu-hb img {
+  display: none;
 }
 
 .right-menu {
@@ -23,12 +29,12 @@ header {
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.493);
   background-color: rgba(0, 0, 255, 0.116);
-  padding: 8px 10px;
+  padding: 4px 10px;
   border-radius: 8px;
 }
 
 .usuario:hover {
-  background-color: rgba(0, 0, 255, 0.37);
+  background-color: rgba(0, 0, 255, 0.749);
 }
 
 .configuracoes {
@@ -39,7 +45,8 @@ header {
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.493);
   background-color: #292929;
-  padding: 8px 10px;
+
+  padding: 4px 10px;
   border-radius: 8px;
 }
 
@@ -47,46 +54,127 @@ header {
   background-color: #29292969;
 }
 
-@media (max-width: 800px) {
-  .configuracoes {
-    span {
-      display: none;
-    }
-  }
+.menuTop_content {
+  display: flex;
+  justify-content: space-between;
 
-  header .logo img {
-    height: 80px;
-    width: 80px;
-  }
-
-  header .right-menu .configuracoes,
-  header .right-menu .usuario {
-    padding: 2px 6px;
-  }
-}
-
-@media (max-width: 570px) {
-
-
-  header {
+  & .Content {
+    padding-inline: 10px;
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    background-color: #000000e7;
     align-items: center;
+    justify-items: center;
+    display: flex;
+    border-bottom: 5px transparent #000000bb;
+    cursor: pointer;
+    border-top: 1px solid #000000b6;
+    text-transform: uppercase;
+    font-size: 14px;
 
-    & .logo {
-      height: 80px;
-      width: 80px;
+    & a {
+      color: rgba(255, 255, 255, 0.685);
+      width: 100%;
+      font-family: "Inter", sans-serif;
+    }
+
+    & a:hover {
+      color: white;
     }
   }
 
-  .usuario {
-    span {
-      display: none;
+  .Content:nth-child(1) {
+    border-bottom: 5px solid rgba(0, 0, 255, 0.749);
+
+    & a {
+      color: white;
+      text-shadow: 1px 1px 1px black;
     }
   }
 }
 
-@media (max-width:400px) {
-  .right-menu img {
-    height: 20px;
-    border: none;
+@media (max-width: 1200px) {
+  .header-container {
+    padding-inline: 20px;
+
+
+    & .configuracoes,
+    .usuario {
+      padding: 3px 8px;
+      font-size: 15px;
+    }
+
+    & .configuracoes img,
+    .usuario img {
+      height: 21px;
+
+    }
+  }
+
+  .menuTop_content {
+    padding-inline: 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    padding-inline: 20px;
+    max-height: 80px;
+
+    & .configuracoes,
+    .usuario {
+      padding: 2px 6px;
+      font-size: 14px;
+    }
+
+    & .configuracoes img,
+    .usuario img {
+      height: 20px;
+
+    }
+
+
+    & .configuracoes span {
+      display: none;
+    }
+
+    & .logo img {
+      height: 120px;
+      width: 120px;
+    }
+  }
+
+  .menuTop_content {
+    & .Content {
+      font-size: 11px;
+      height: 50px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header-container {
+    padding-inline: 20px;
+    max-height: 60px;
+
+    & .configuracoes,
+    .usuario {
+      display: none;
+    }
+
+    & .menu-hb img {
+      display: block;
+    }
+
+
+    & .logo img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  .menuTop_content {
+    display: none;
   }
 }
